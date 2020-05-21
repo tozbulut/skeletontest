@@ -8,7 +8,86 @@
     {% include header.html %}
 
     <div class="container">
+      <div class="navbar-spacer"></div>
+      <nav class="navbar">
+        <div class="container">
+          <ul class="navbar-list">
+            <li class="navbar-item"><a class="navbar-link" href="#intro">Intro</a></li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#" data-popover="#codeNavPopover">Code</a>
+              <div id="codeNavPopover" class="popover">
+                <ul class="popover-list">
+                  <li class="popover-item">
+                    <a class="popover-link" href="#grid">Grid</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="#typography">Typography</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="#buttons">Buttons</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="#forms">Forms</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="#lists">Lists</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="#code">Code</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="#tables">Tables</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="#queries">Queries</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="#utilities">Utilities</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="navbar-item"><a class="navbar-link" href="#examples">Examples</a></li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#" data-popover="#moreNavPopover">More</a>
+              <div id="moreNavPopover" class="popover">
+                <ul class="popover-list">
+                  <li class="popover-item">
+                    <a class="popover-link" href="https://github.com/dhg/Skeleton">On Github</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="https://github.com/dhg/Skeleton#browser-support">Browsers</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="https://github.com/dhg/Skeleton#license">License</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="https://github.com/dhg/Skeleton#extensions">Extensions</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="https://github.com/dhg/Skeleton/releases">Versions</a>
+                  </li>
+                  <li class="popover-item">
+                    <a class="popover-link" href="https://github.com/dhg/Skeleton#colophon">Colophon</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
+      <div class="docs-section" id="intro">
+        <h6 class="docs-header">Is Skeleton for you?</h6>
+        <p>You should use Skeleton if you're embarking on a smaller project or just don't feel like you need all the utility of larger frameworks. Skeleton only styles a handful of standard HTML elements and includes a grid, but that's often more than enough to get started. In fact, <u>this site is built on Skeleton and has ~200 lines of custom CSS</u> (half of which is the docking navigation).</p>
+        <p>Love Skeleton and want to Tweet it, share it, or star it? Well, I appreciate that &lt;3</p>
+        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 60px; height: 20px;" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.2a008290075125adde2d7b849b06a0bb.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fgetskeleton.com%2F&amp;related=dhg&amp;size=m&amp;text=Skeleton%20-%20A%20dead%20simple%2C%20responsive%20boilerplate.&amp;time=1590104451280&amp;type=share&amp;url=http%3A%2F%2Fwww.getskeleton.com&amp;via=dhg" data-url="http://www.getskeleton.com"></iframe>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <!-- <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.getskeleton.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=151131931646052" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width:140px" allowTransparency="true"></iframe> -->
+        <iframe src="http://ghbtns.com/github-btn.html?user=dhg&amp;repo=Skeleton&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=dhg&amp;repo=Skeleton&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+      </div>
+      
       {{ content }}
 
     </div>
