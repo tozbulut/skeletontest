@@ -6,8 +6,7 @@ title: Tozbulut
 <ul>
 {% for post in site.posts %}
 <li>
-    {{ post.date | date: "%B %e, %Y" }}
-    <a href="{{ post.url }}">{{ post.title }}</a>
+   <p> {{ post.date | date: "%B %e, %Y" }} | <a href="{{ post.url }}">{{ post.title }}</a></p>
   </li>
 {% endfor %}
 </ul>
