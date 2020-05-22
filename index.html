@@ -1,99 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+---
+layout: default
+title: Jekyll Boilerplate
+---
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<h1>{{ page.title }}</h1>
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+{% for post in site.posts %}
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/custom.css">
+    {{ post.date | date: "%B %e, %Y" }}
+    <a href="{{ post.url }}">{{ post.title }}</a>
 
-    <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-  <link rel="stylesheet" href="css/github-prettify-theme.css">
-  <script src="js/site.js"></script>
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-</head>
-<body class="code-snippets-visible">
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="navbar-spacer"></div>
-    <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="#intro">Yazılar</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#intro">Kısa Kısa</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#intro">Radar</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#intro">Etiketler</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#intro">Hakkında</a></li>
-
-        
-        </ul>
-      </div>
-    </nav>
-
-    <div class="docs-section" id="intro">
-      <h6 class="docs-header">Is Skeleton for you?</h6>
-      <p>You should use Skeleton if you're embarking on a smaller project or just don't feel like you need all the utility of larger frameworks. Skeleton only styles a handful of standard HTML elements and includes a grid, but that's often more than enough to get started. In fact, <u>this site is built on Skeleton and has ~200 lines of custom CSS</u> (half of which is the docking navigation).</p>
-      <p>Love Skeleton and want to Tweet it, share it, or star it? Well, I appreciate that &lt;3</p>
-   </div>
-
-   <div class="docs-section examples" id="examples">
-    <h6 class="docs-header">Examples</h6>
-    <div class="row example">
-      <a class="example-screenshot-wrapper" target="_blank" href="examples/landing">
-        <img class="example-screenshot" src="images/examples/landing.jpg">
-      </a>
-      <div class="one-half offset-by-one-half column">
-        <h6 class="example-header">Demo Landing Page</h6>
-        <p class="example-description">This template is an example of how easy it can be to create a landing page with just the Skeleton grid and a few custom styles. The entire demo is ~150 lines of CSS including comments (most of which is positioning the phones at the top).</p>
-        <a class="button" href="examples/landing" target="_blank">Demo</a>
-        <a class="button" href="https://github.com/dhg/Skeleton/tree/gh-pages/examples/landing" target="_blank">Source</a>
-      </div>
-    </div>
-    <div class="row example">
-      <div class="example-screenshot-wrapper">
-        <div class="example-screenshot coming-soon"></div>
-      </div>
-      <div class="one-half offset-by-one-half column">
-        <h6 class="example-header">More Coming Soon!</h6>
-        <p class="example-description">More examples will be added to help anyone get started or more familiar with how Skeleton works. The goal is education. If you're more interested in real, live examples of Skeleton sites, I'll be creating a "Built on Skeleton" list soon!</p>
-      </div>
-    </div>
-  </div>
-
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-      </div>
-    </div>
-  </div>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
-</html>
+{% endfor %}
