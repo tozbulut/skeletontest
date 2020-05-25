@@ -1,9 +1,30 @@
----
-layout: default
-title: This is just a placeholder post
----
+<!DOCTYPE html>
+<html lang="tr">
+  {% include head.html %}
+    <body class="code-snippets-visible">
+  
+        <div class="container">
 
-<h1>{{ post.title }}</h1>
+    {% include navbar.html %}
 
-{{ content }}
+      <section class="header">
+        <h2 class="title">{{ post.title }}</h2>
+                
+      </section>
+  
+      <div class="docs-section" id="intro">
+        
+        {{ content }}
+   
+ 
+    </div>
+  
+  </div>
+    
+  </body>
+</html>
+
+
+
+
 
