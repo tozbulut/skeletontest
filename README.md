@@ -1,67 +1,43 @@
-## Jekyll Boilerplate
+# Jekyll Boilerplate
 
-![unmaintained](http://img.shields.io/badge/status-unmaintained-red.png)
+Jekyll Boilerplate is a lightweight and cleaned up version of the initial [Jekyll](https://jekyllrb.com/) setup. The motivation behind this project was for me to avoid doing the same things over and over every time I build yet another site with Jekyll.
 
-A jekyll starting point. Based on [Jekyll Base](https://github.com/danielmcgraw/Jekyll-Base)
-by Daniel McGraw.
+## Features
 
-### Structure
+### Additions
 
-```
-.
-├── _includes
-├── _layouts
-│   ├── default.html
-│   └── post.html
-├── _posts
-│   └── 1970-01-01-placeholder-post.md
-├── .gitignore
-├── README.md
-├── _config.yml
-└── index.html
-```
+* An empty folder has been created at `assets/images`.
+* An empty folder has been created at `assets/js`.
+* An initial configuration for Kramdown has been added.
+* The CSS is being minified via Sass.
+* Some project-agnostic base styles have been added.
+* Normalize.css has been added.
+* `.DS_Store` and `node_modules` have been added to `.gitignore`.
+* The `jekyll-feed` gem has been added to automate Atom feed generation.
+* The `jekyll-sitemap` gem has been added to automate sitemap generation.
 
-### _config.yml
+### Editions
 
-This is where you will be putting your Jekyll configuration options. If this
-file is omitted Jekyll will use its defualts to build your site. You can find
-the configuration options and default configuration
-[here](https://github.com/mojombo/jekyll/wiki/configuration).
+* The `_sass` folder has been moved to `assets/sass`.
+* The `css` folder has been moved to `assets/css`.
+* The `default.html` layout has been cleaned up.
+* The `index.html` has been cleaned up.
 
-### _layouts
+### Deletions
 
-This folder is where all the layout templates are stored.
+* The `about.md` file has been removed.
+* The `page.html` and `post.html` layouts have been removed.
+* The sample post and the `_posts` folder have been removed.
+* All initial partials from the `_includes` folder but `head.html` have been removed.
+* Options `email`, `twitter_username`, `github_username` have been removed.
+* All the existing styles have been removed.
 
-#### default.html
+### Fixes
 
-This is the base layout template. There are no naming conventions, but if you
-choose to change this file's name make sure you update all the layout
-references in your file's YAML Front Matter blocks. To learn more about the use
-of YAML Front Matter check out [this
-page](https://github.com/mojombo/jekyll/wiki/yaml-front-matter).
+* A `lang` attribute has been added to the default layout.
+* A `<main>` element has been added to the default layout.
 
-#### post.html
+## Credits
 
-This is the base post template.
-
-### _posts
-
-This folder is where all the posts are stored. Notice the naming convention
-that is used. You will want to name your files with the the publish date
-preceeding the posts title all seperated by dashes
-(Year-Month-Day-Title-Of-The-Post.md). The post date that you see is pulled
-straight from this filename so make sure you lable your files right.
-
-#### 1970-01-01-placeholder-post.md
-
-This is a simple blog post using markdown. To learn more about markdown check
-out the [markdown syntax
-documentation](http://daringfireball.net/projects/markdown/syntax). Also notice
-that there is YAML Front Matter in this file specifying the layout it will use
-and the title of the post. Layout is one of a couple predefined global
-variables. You can also specify custom variables in the YAML Front Matter.
-
-### index.html
-
-This is used to render the site's index. It is essntially a post loop wrapped
-in your base layout.
+* [Jekyll](https://jekyllrb.com/)
+* [Hugo Giraudel](https://twitter.com/HugoGiraudel)
